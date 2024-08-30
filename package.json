@@ -4,6 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "vite build",
+  "deploy": "gh-pages -d dist",
+  "start": "vite",
+  "build": "vite build"
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
