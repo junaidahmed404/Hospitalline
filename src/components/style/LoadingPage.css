@@ -1,0 +1,132 @@
+/* Styling for the LoadingPage */
+.LoadingPage {
+  height: 100vh;
+  background: linear-gradient(to right, #4874fa, #8caafd, #4874fa);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LoadingPage a{
+  color: white;
+}
+/* Styling for the app logo container */
+.appLogo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 2rem;
+  position: relative;
+  left: 0;
+}
+
+/* Styling for the logo image */
+.appLogo img {
+  width: 200px;
+  animation: rotateAndSlideLogo 1.5s ease-in-out forwards;
+  z-index: 9;
+}
+
+/* Styling for the text that appears after the animation */
+.logoText {
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute;
+  right: -400px; /* Adjust based on the final position after sliding */
+  animation: slideText 0.5s ease-in-out 1.5s forwards;
+  width: auto;
+}
+
+.logoText span {
+  font-size: 2rem;
+}
+.logoText h1 {
+  width: 100%;
+  width: 900px;
+  display: block;
+}
+/* Keyframe animation for rotating and sliding the logo */
+@keyframes rotateAndSlideLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  66% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(-500px);
+  }
+}
+
+/* Keyframe animation for sliding the text into view */
+@keyframes slideText {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.scrollBtn {
+  display: flex;
+  position: fixed;
+  animation: blink 1s infinite;
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+  font-size: 2rem; /* Adjust as needed */
+}
+.scrollBtn img {
+  width: 20px;
+}
+.o {
+  bottom: 0;
+}
+.t {
+  bottom: 10px;
+}
+.th {
+  bottom: 20px;
+}
+/* Blinking effect */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Blinking effect */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Sequential blinking with different delays */
+.scrollBtn.o {
+  animation: blink 1.5s infinite;
+}
+
+.scrollBtn.t {
+  animation: blink 1.5s infinite;
+  animation-delay: 0.5s;
+}
+
+.scrollBtn.th {
+  animation: blink 1.5s infinite;
+  animation-delay: 1s;
+}
+
+.scrollBtn {
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+  font-size: 2rem; /* Adjust as needed */
+}
