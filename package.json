@@ -5,18 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-<<<<<<< HEAD
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
-=======
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "vite build",
     "deploy": "gh-pages -d dist",
     "start": "vite",
     "build": "vite build"
->>>>>>> 29b66b9429399e29c93bf194e48b4cd8db1fc8ce
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
